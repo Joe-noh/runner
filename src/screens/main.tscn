@@ -24,6 +24,10 @@ collision_layer = 2
 position = Vector2( 640, 750 )
 shape = SubResource( 1 )
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
+position = Vector2( 640, -48 )
+shape = SubResource( 1 )
+
 [node name="Restart" parent="." instance=ExtResource( 4 )]
 position = Vector2( 640, 380 )
 z_index = 10
