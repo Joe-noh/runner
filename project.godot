@@ -14,6 +14,10 @@ config/name="Runner"
 run/main_scene="res://src/screens/main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameState="*res://src/game_state.gd"
+
 [display]
 
 window/size/width=1280

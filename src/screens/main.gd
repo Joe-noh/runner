@@ -21,3 +21,7 @@ func _process(delta):
 
 		spawned += 1
 		elapsed = 0
+
+	if GameState.is_game_over && Input.is_action_just_pressed('ui_accept'):
+		GameState.restart()
+		get_tree().reload_current_scene()
