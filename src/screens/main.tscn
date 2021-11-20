@@ -14,8 +14,10 @@ script = ExtResource( 2 )
 
 [node name="Runner" parent="." instance=ExtResource( 3 )]
 position = Vector2( 78.4907, 657.733 )
+collision_mask = 6
 
 [node name="Floor" type="StaticBody2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2( 640, 750 )
