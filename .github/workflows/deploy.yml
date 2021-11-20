@@ -1,5 +1,7 @@
 name: Deploy
 
+on: push
+
 jobs:
   export-web:
     runs-on: ubuntu-latest
