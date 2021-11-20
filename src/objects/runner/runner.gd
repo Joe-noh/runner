@@ -5,4 +5,5 @@ func _process(delta):
 		jump()
 
 func jump():
+	linear_velocity = Vector2.ZERO
 	apply_central_impulse(Vector2(0, -500))
