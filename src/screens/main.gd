@@ -8,6 +8,7 @@ onready var Bird = load("res://src/objects/bird/bird.tscn")
 
 func _ready():
 	rng.randomize()
+	$Restart.hide()
 
 func _process(delta):
 	elapsed += (10 + spawned * 0.1) * delta
@@ -22,6 +23,11 @@ func _process(delta):
 		spawned += 1
 		elapsed = 0
 
-	if GameState.is_game_over && Input.is_action_just_pressed('ui_accept'):
+	if GameState.is_game_over:
+		$Restart.show()
+
+func _on_Restart_clicked():
+	if GameState.is_game_over:
+		$Restart.hide()
 		GameState.restart()
 		get_tree().reload_current_scene()

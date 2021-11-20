@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/runner_bird.png-bee5527d3d5e911867d91e2f22e19e88.stex"
+path="res://.import/restart.png-e3341f5ab3201ffaa3fc76965a1ab56e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/runner_bird.png"
-dest_files=[ "res://.import/runner_bird.png-bee5527d3d5e911867d91e2f22e19e88.stex" ]
+source_file="res://assets/restart.png"
+dest_files=[ "res://.import/restart.png-e3341f5ab3201ffaa3fc76965a1ab56e.stex" ]
 
 [params]
 
