@@ -17,6 +17,7 @@ func _process(delta):
 		var bird = Bird.instance()
 		var y = rng.randi_range(10, 760)
 		bird.init(Vector2(1300, y), 2.0)
+		bird.add_to_group('birds')
 
 		add_child(bird)
 

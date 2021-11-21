@@ -14,5 +14,5 @@ func jump():
 	apply_central_impulse(Vector2(0, -500))
 
 func _on_Runner_body_entered(body):
-	if body.name.find('Bird') != -1:
+	if 'birds' in body.get_groups():
 		GameState.game_over()
