@@ -1,18 +1,25 @@
 extends RigidBody2D
 
+signal killed
+
+var _killed = false
+
 func _ready():
 	self.contact_monitor = true
 	self.contacts_reported = true
 
+	self.connect('body_entered', self, '_on_body_entered')
+
 func _process(delta):
 	if Input.is_action_just_pressed('ui_accept'):
-		if !GameState.is_game_over:
-			jump()
+		if not _killed:
+			_jump()
 
-func jump():
-	linear_velocity = Vector2.ZERO
+func _jump():
+	self.linear_velocity = Vector2.ZERO
 	apply_central_impulse(Vector2(0, -500))
 
-func _on_Runner_body_entered(body):
+func _on_body_entered(body):
 	if 'birds' in body.get_groups():
-		GameState.game_over()
+		_killed = true
+		emit_signal('killed')

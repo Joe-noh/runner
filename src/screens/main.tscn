@@ -31,5 +31,3 @@ shape = SubResource( 1 )
 [node name="Restart" parent="." instance=ExtResource( 4 )]
 position = Vector2( 640, 380 )
 z_index = 10
-
-[connection signal="clicked" from="Restart" to="." method="_on_Restart_clicked"]

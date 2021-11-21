@@ -1,10 +1,10 @@
 extends Sprite
 
 const VELOCITY = -200
-onready var width = texture.get_width() * scale.x
+onready var _width = texture.get_width() * scale.x
 
 func _process(delta):
-	position.x += VELOCITY * delta
+	self.position.x += VELOCITY * delta
 
-	if (position.x < -width):
-		position.x += width * 2
+	if (self.position.x < -_width):
+		self.position.x += _width * 2
