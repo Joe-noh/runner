@@ -7,7 +7,7 @@ func init(pos, speed_ratio):
 	_velocity = _velocity * speed_ratio
 
 func _process(delta):
-	position -= _velocity * delta
+	self.position -= _velocity * delta
 
 	if position.x < -50:
 		queue_free()

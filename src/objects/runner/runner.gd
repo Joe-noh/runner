@@ -13,10 +13,10 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed('ui_accept'):
 		if not _killed:
-			jump()
+			_jump()
 
-func jump():
-	linear_velocity = Vector2.ZERO
+func _jump():
+	self.linear_velocity = Vector2.ZERO
 	apply_central_impulse(Vector2(0, -500))
 
 func _on_body_entered(body):
