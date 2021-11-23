@@ -9,4 +9,4 @@ jobs:
       image: barichello/godot-ci:3.3.4
     steps:
       - uses: actions/checkout@v2
-      - run: godot -d -s --path $PWD addons/gut/gut_cmdln.gd
+      - run: godot -d -s addons/gut/gut_cmdln.gd
