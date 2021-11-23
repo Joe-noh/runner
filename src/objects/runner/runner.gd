@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+signal jump
 signal killed
 
 var _killed = false
@@ -16,6 +17,7 @@ func _process(delta):
 			_jump()
 
 func _jump():
+	emit_signal('jump')
 	self.linear_velocity = Vector2.ZERO
 	apply_central_impulse(Vector2(0, -500))
 
