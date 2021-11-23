@@ -11,7 +11,7 @@ func _ready():
 
 	self.connect('body_entered', self, '_on_body_entered')
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed('ui_accept'):
 		if not _killed:
 			_jump()
