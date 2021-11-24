@@ -9,5 +9,5 @@ func init(pos, speed_ratio):
 func _process(delta):
 	self.position -= _velocity * delta
 
-	if position.x < -50:
-		queue_free()
+func _on_screen_exited():
+	queue_free()
