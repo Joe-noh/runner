@@ -6,7 +6,7 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:3.3.4
+      image: barichello/godot-ci:3.4
     steps:
       - uses: actions/checkout@v2
       - run: godot -d -s addons/gut/gut_cmdln.gd
